@@ -1,0 +1,10 @@
+name: Segundo workflow
+
+on: pull_request
+
+jobs:
+  segundo_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hacer echo
+        run: echo "HELLO WORLD"
