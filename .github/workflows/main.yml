@@ -21,6 +21,7 @@ jobs:
 
   fase_push:
     runs-on: ubuntu-latest
+    needs: fase_test
     steps:
       - name: Obtener código
         uses: actions/checkout@v4
