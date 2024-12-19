@@ -23,6 +23,11 @@ jobs:
         with:
           linter: pylint
 
+      - uses: sonarsource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
   fase_push:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
